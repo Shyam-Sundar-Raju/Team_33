@@ -38,7 +38,7 @@ Tick every box → strong conference-ready paper in hand.
 - [ ] **Implement register-invariant rule model** — hand-derive a small set of physical/logical invariants per PLC (classical baseline, interpretable by construction).
 - [ ] **Implement LSTM-Autoencoder** (deep-learning baseline) — reconstruction-error-based anomaly scoring.
 - [ ] **Implement Isolation Forest** (naive floor baseline) on per-PLC feature windows.
-- [ ] **Train/tune all 5 local models identically** across all 3 PLCs, using the same train/val split and threshold-setting procedure for every model.
+- [ ] **Train/tune all 5 local models identically** across all 6 stages, using the same train/val split and threshold-setting procedure for every model.
 - [ ] **Run all 5 local models against every dataset** (SWaT, secondary dataset, own testbed).
 
 ---
@@ -48,7 +48,7 @@ Tick every box → strong conference-ready paper in hand.
 - [ ] **Implement GAT (Graph Attention Network)** over your 3-PLC process graph (your primary/novel global model) — define edges based on physical process connectivity.
 - [ ] **Implement centrality-aware GCN (CGAAD-inspired)** — compute centrality measures (degree/betweenness) via networkx, incorporate as node weighting/features in a GCN.
 - [ ] **Implement VAR (Vector Autoregression)** — interpretable classical baseline, explicit cross-PLC coefficients.
-- [ ] **Implement Gradient-Boosted Trees residual model** (XGBoost) — nonlinear classical baseline with lag features.
+- [ ] **Implement LSTM-Autoencoder**.
 - [ ] **Implement Isolation Forest** on the joint (all-PLC) feature vector (naive floor baseline).
 - [ ] **Train/tune all global models identically**, same split/thresholding procedure as local layer.
 - [ ] **Run all global models against every dataset.**
