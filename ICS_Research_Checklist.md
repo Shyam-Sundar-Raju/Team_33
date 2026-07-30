@@ -18,10 +18,10 @@ Tick every box → strong conference-ready paper in hand.
 
 ## PHASE 1 — Data Preparation
 
-- [ ] **Preprocess SWaT physical data**: clean, label, normalize (fit scaler on train-normal only), tag→PLC mapping, train/val/test split.
+- [*] **Preprocess SWaT physical data**: clean, label, normalize (fit scaler on train-normal only), tag→PLC mapping, train/val/test split.
 - [ ] **Preprocess secondary dataset (WADI/HAI)** the same way, using an identical pipeline structure to SWaT so comparisons are apples-to-apples.
-- [ ] **Preprocess your own testbed data**: same cleaning/labeling/normalization pipeline, once attack runs are collected.
-- [ ] **Define and document your 3-PLC subset mapping** (which SWaT stages/PLCs correspond to your 3 local nodes, and why they're physically connected) — needed to justify your global model's graph structure.
+- [*] **Preprocess your own testbed data**: same cleaning/labeling/normalization pipeline, once attack runs are collected.
+- [*] **Define and document your 3-PLC subset mapping** (which SWaT stages/PLCs correspond to your 3 local nodes, and why they're physically connected) — needed to justify your global model's graph structure.
 - [ ] **Design and document attack scenarios in 3 categories**: local-only-detectable, global-only-detectable, both-detectable — with multiple variants (magnitude/duration/timing) per category for statistically meaningful counts.
 - [ ] **Map every attack scenario (testbed + dataset attacks) to MITRE ATT&CK for ICS technique IDs** *(Addition #5)* — grounds your evaluation in a recognized threat taxonomy; strengthens realism claims and gives reviewers a familiar reference frame.
 - [ ] **Obtain the SWaT P&ID (Piping and Instrumentation Diagram) and process description from iTrust** — authoritative ground truth for which tags/stages are physically connected; typically included alongside dataset access.
@@ -119,16 +119,6 @@ Tick every box → strong conference-ready paper in hand.
 
 ---
 
-## PHASE 10.5 — Additional Hierarchical-Architecture Justifications (Discussion-section material)
-
-- [ ] **Write up bandwidth/attack-surface reduction as a formal justification** (measured in Phase 7) — the monitoring architecture itself has a smaller, more defensible attack surface than a flat/all-data-forwarded design.
-- [ ] **Write up the scalability argument** — a flat/monolithic global model's input dimensionality grows with plant size and eventually becomes computationally infeasible; hierarchical local pre-filtering keeps the global layer's input manageable regardless of plant size. Frame explicitly as "designed to scale beyond the 3-PLC evaluation testbed" since this isn't directly testable at your scale.
-- [ ] **Write up the incremental deployment argument** — local nodes can be deployed/protect a PLC immediately; new PLCs can be added via a new local node + graph update without retraining every existing local model, unlike a flat model requiring full retraining.
-- [ ] **Write up the fault isolation / diagnosability argument** — hierarchical alerts localize the problem (local-only vs. cross-PLC inconsistency) rather than a single flat anomaly score with no locality information; tie this directly to the Phase 8 interpretability case study to show hierarchical models give more actionable alerts than the flat baseline.
-- [ ] **Write up the heterogeneous retraining-cadence argument** — local models are cheap to retrain frequently (e.g., after maintenance changes one PLC's normal behavior) without needing to retrain the more expensive global model every time.
-
----
-
 ## PHASE 11 — Writing & Packaging
 
 - [ ] **Write Introduction** — motivate the local/global gap, state the flat-baseline comparison and adversarial testing as evidence, not just claims.
@@ -141,5 +131,11 @@ Tick every box → strong conference-ready paper in hand.
 - [ ] **Internal review pass** — at least one full team read-through before submission, checking every claim in the abstract/intro is actually backed by a results table.
 - [ ] **Check target venue's formatting/page limits and submission requirements** — confirm early, not the week of deadline.
 - [ ] **Prepare supplementary material** (code repo, dataset access notes, extended tables) if the venue allows/expects it — increasingly common and expected for reproducibility credibility.
+
+- [ ] **Write up bandwidth/attack-surface reduction as a formal justification** (measured in Phase 7) — the monitoring architecture itself has a smaller, more defensible attack surface than a flat/all-data-forwarded design.
+- [ ] **Write up the scalability argument** — a flat/monolithic global model's input dimensionality grows with plant size and eventually becomes computationally infeasible; hierarchical local pre-filtering keeps the global layer's input manageable regardless of plant size. Frame explicitly as "designed to scale beyond the 3-PLC evaluation testbed" since this isn't directly testable at your scale.
+- [ ] **Write up the incremental deployment argument** — local nodes can be deployed/protect a PLC immediately; new PLCs can be added via a new local node + graph update without retraining every existing local model, unlike a flat model requiring full retraining.
+- [ ] **Write up the fault isolation / diagnosability argument** — hierarchical alerts localize the problem (local-only vs. cross-PLC inconsistency) rather than a single flat anomaly score with no locality information; tie this directly to the Phase 8 interpretability case study to show hierarchical models give more actionable alerts than the flat baseline.
+- [ ] **Write up the heterogeneous retraining-cadence argument** — local models are cheap to retrain frequently (e.g., after maintenance changes one PLC's normal behavior) without needing to retrain the more expensive global model every time.
 
 ---
