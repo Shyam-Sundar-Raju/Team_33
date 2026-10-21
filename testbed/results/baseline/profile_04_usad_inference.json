@@ -1,0 +1,92 @@
+{
+  "script": "04_usad_inference.py",
+  "cycles_measured": 50,
+  "cpu_percent_of_one_core": {
+    "mean": 9.5693,
+    "p95": 18.0029,
+    "max": 18.9837,
+    "n": 50
+  },
+  "cpu_percent_of_all_cores_mean": 2.392,
+  "rss_MB": {
+    "mean": 358.5016,
+    "p95": 358.5147,
+    "max": 358.5147,
+    "n": 50
+  },
+  "modbus_poll_ms": {
+    "mean": 206.3888,
+    "p95": 212.7827,
+    "max": 213.5291,
+    "n": 50
+  },
+  "modbus_read_failures_total": 0,
+  "compute_block_ms_(scale+infer+threshold+print)": {
+    "mean": 9.7545,
+    "p95": 13.7436,
+    "max": 144.9472,
+    "n": 50
+  },
+  "torch_model_forward_ms": {
+    "mean": 7.7369,
+    "p95": 12.5819,
+    "max": 97.1025,
+    "n": 50
+  },
+  "network_per_cycle": {
+    "modbus_requests": 40,
+    "modbus_app_layer_bytes": 1000,
+    "modbus_est_wire_bytes": 7480,
+    "modbus_kbps_at_poll_rate": 598.4
+  },
+  "fusion_link": {
+    "destination": "127.0.0.1:5005",
+    "packets_sent": 50,
+    "send_errors": 0,
+    "udp_payload_bytes": 108,
+    "udp_wire_bytes_per_packet": 150,
+    "achieved_packets_per_sec": 4.681,
+    "udp_kbps_avg": 5.617,
+    "send_interval_ms_(target=POLL_INTERVAL)": {
+      "mean": 213.6458,
+      "p95": 223.8263,
+      "max": 225.4602,
+      "n": 49
+    },
+    "send_jitter_ms_std": 6.2533,
+    "deadline_overruns_(interval>1.05x_poll)": 49,
+    "sensing_to_send_ms_(poll+compute)": {
+      "mean": 216.1433,
+      "p95": 223.4699,
+      "max": 358.027,
+      "n": 50
+    },
+    "udp_send_call_ms_(kernel_handoff_only)": {
+      "mean": 0.0539,
+      "p95": 0.0668,
+      "max": 0.1,
+      "n": 50
+    }
+  },
+  "model_footprint": {
+    "files_MB": {
+      "models/usad_swat_model_full.pth": 0.0283,
+      "models/swat_scaler.pkl": 0.0034
+    },
+    "in_memory_MB_(pympler)": 0.0561,
+    "load_rss_delta_MB_(process_growth_during_load)": 106.64,
+    "total_stored_numeric_values": 5173,
+    "torch_trainable_parameters": 4914,
+    "objects": [
+      {
+        "type": "USAD",
+        "stored_numeric_values": 4914,
+        "trainable_parameters": 4914
+      },
+      {
+        "type": "MinMaxScaler",
+        "stored_numeric_values": 259
+      }
+    ]
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "script": "03_lstm_ae_inference.py",
+  "cycles_measured": 40,
+  "cpu_percent_of_one_core": {
+    "mean": 40.3798,
+    "p95": 46.1544,
+    "max": 47.1134,
+    "n": 40
+  },
+  "cpu_percent_of_all_cores_mean": 10.095,
+  "rss_MB": {
+    "mean": 822.3203,
+    "p95": 822.6275,
+    "max": 822.6898,
+    "n": 40
+  },
+  "modbus_poll_ms": {
+    "mean": 120.0448,
+    "p95": 123.2068,
+    "max": 125.1762,
+    "n": 40
+  },
+  "modbus_read_failures_total": 0,
+  "compute_block_ms_(scale+infer+threshold+print)": {
+    "mean": 75.8255,
+    "p95": 79.76,
+    "max": 89.3231,
+    "n": 40
+  },
+  "torch_model_forward_ms": null,
+  "network_per_cycle": {
+    "modbus_requests": 22,
+    "modbus_app_layer_bytes": 550,
+    "modbus_est_wire_bytes": 4114,
+    "modbus_kbps_at_poll_rate": 329.12
+  },
+  "fusion_link": {
+    "destination": "127.0.0.1:50000",
+    "packets_sent": 100,
+    "send_errors": 0,
+    "udp_payload_bytes": 37,
+    "udp_wire_bytes_per_packet": 79,
+    "achieved_packets_per_sec": 5.02,
+    "udp_kbps_avg": 3.173,
+    "send_interval_ms_(target=POLL_INTERVAL)": {
+      "mean": 196.3316,
+      "p95": 202.4871,
+      "max": 212.5867,
+      "n": 39
+    },
+    "send_jitter_ms_std": 4.2393,
+    "deadline_overruns_(interval>1.05x_poll)": 39,
+    "sensing_to_send_ms_(poll+compute)": {
+      "mean": 195.8704,
+      "p95": 202.0718,
+      "max": 210.6532,
+      "n": 40
+    },
+    "udp_send_call_ms_(kernel_handoff_only)": {
+      "mean": 0.0471,
+      "p95": 0.05,
+      "max": 0.0506,
+      "n": 40
+    }
+  },
+  "model_footprint": {
+    "files_MB": {
+      "models/global_lstm_autoencoder.keras": 0.2326,
+      "models/global_lstm_scaler.pkl": 0.002,
+      "models/global_lstm_threshold.pkl": 0.0002
+    },
+    "in_memory_MB_(pympler)": 0.4123,
+    "total_stored_numeric_values": 26799,
+    "torch_trainable_parameters": null,
+    "objects": [
+      {
+        "type": "Functional",
+        "stored_numeric_values": 26685
+      },
+      {
+        "type": "MinMaxScaler",
+        "stored_numeric_values": 114
+      }
+    ]
+  }
+}

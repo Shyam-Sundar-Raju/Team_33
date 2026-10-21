@@ -1,0 +1,193 @@
+{
+  "script": "learned_fusion_node.py",
+  "mode": "live traffic",
+  "cycles_measured": 50,
+  "cpu_percent_of_one_core": {
+    "mean": 3.3875,
+    "p95": 9.9747,
+    "max": 10.2055,
+    "n": 50
+  },
+  "cpu_percent_of_all_cores_mean": 0.847,
+  "rss_MB": {
+    "mean": 249.6538,
+    "p95": 249.6922,
+    "max": 249.7085,
+    "n": 50
+  },
+  "torch_threads": 4,
+  "decision_loop": {
+    "compute_block_ms_(decay+decide+print)": {
+      "mean": 1.5108,
+      "p95": 2.1262,
+      "max": 2.1364,
+      "n": 50
+    },
+    "print_ms": {
+      "mean": 0.0362,
+      "p95": 0.0474,
+      "max": 0.0535,
+      "n": 50
+    },
+    "compute_excl_print_ms": {
+      "mean": 1.4746,
+      "p95": 2.0871,
+      "max": 2.1012,
+      "n": 50
+    },
+    "torch_model_forward_ms": {
+      "mean": 1.1758,
+      "p95": 1.7815,
+      "max": 1.7958,
+      "n": 50
+    },
+    "rule_eval_us": null,
+    "cycle_period_ms_(target=POLL_INTERVAL)": {
+      "mean": 100.2706,
+      "p95": 101.0562,
+      "max": 101.2544,
+      "n": 50
+    },
+    "cycle_jitter_ms_std": 0.4856,
+    "deadline_overruns_(period>1.05x_poll)": 0,
+    "cycles_flagged_attack": 49
+  },
+  "udp_receive": {
+    "packets_received": 282,
+    "invalid_or_ignored_packets": 0,
+    "json_parse_errors": 0,
+    "udp_payload_bytes_mean": 48,
+    "udp_wire_bytes_per_packet_mean": 89.7,
+    "achieved_packets_per_sec_total": 56.386,
+    "udp_kbps_avg": 40.743,
+    "inter_arrival_ms_(all_sources)": {
+      "mean": 17.8145,
+      "p95": 41.1517,
+      "max": 42.7738,
+      "n": 281
+    },
+    "json_parse_ms": {
+      "mean": 0.014,
+      "p95": 0.0261,
+      "max": 0.0344,
+      "n": 282
+    },
+    "recv_to_state_update_ms": {
+      "mean": 0.0346,
+      "p95": 0.0658,
+      "max": 0.0857,
+      "n": 282
+    },
+    "per_source": {
+      "local_1": {
+        "packets": 50,
+        "rate_hz": 9.977,
+        "interval_ms": {
+          "mean": 100.2287,
+          "p95": 123.7629,
+          "max": 124.7059,
+          "n": 49
+        },
+        "jitter_ms_std": 12.0811,
+        "seq_lost": 0
+      },
+      "local_2": {
+        "packets": 31,
+        "rate_hz": 6.247,
+        "interval_ms": {
+          "mean": 160.0871,
+          "p95": 170.6636,
+          "max": 170.9741,
+          "n": 30
+        },
+        "jitter_ms_std": 13.1114,
+        "seq_lost": 0
+      },
+      "local_3": {
+        "packets": 50,
+        "rate_hz": 9.984,
+        "interval_ms": {
+          "mean": 100.1554,
+          "p95": 102.2674,
+          "max": 104.1619,
+          "n": 49
+        },
+        "jitter_ms_std": 1.4663,
+        "seq_lost": 0
+      },
+      "local_4": {
+        "packets": 51,
+        "rate_hz": 9.988,
+        "interval_ms": {
+          "mean": 100.1174,
+          "p95": 102.7962,
+          "max": 103.3824,
+          "n": 50
+        },
+        "jitter_ms_std": 1.4697,
+        "seq_lost": 0
+      },
+      "local_5": {
+        "packets": 50,
+        "rate_hz": 9.991,
+        "interval_ms": {
+          "mean": 100.0875,
+          "p95": 101.4594,
+          "max": 101.9104,
+          "n": 49
+        },
+        "jitter_ms_std": 0.7697,
+        "seq_lost": 0
+      },
+      "local_6": {
+        "packets": 50,
+        "rate_hz": 9.985,
+        "interval_ms": {
+          "mean": 100.1492,
+          "p95": 101.4012,
+          "max": 101.6654,
+          "n": 49
+        },
+        "jitter_ms_std": 0.8344,
+        "seq_lost": 0
+      }
+    },
+    "seq_lost_total_(needs_\"seq\"_in_payload)": 0,
+    "kernel_udp_counters_delta_(system-wide)": {
+      "InDatagrams": 282,
+      "InErrors": 0,
+      "RcvbufErrors": 0,
+      "NoPorts": 0
+    }
+  },
+  "freshness": {
+    "ingest_to_decision_ms_(arrival->cycle_that_uses_it)": {
+      "mean": 48.6558,
+      "p95": 79.1163,
+      "max": 101.7754,
+      "n": 281
+    },
+    "packets_consumed_per_cycle": {
+      "mean": 5.62,
+      "p95": 6.0,
+      "max": 6,
+      "n": 50
+    },
+    "state_overwrites_before_read_(same_source_twice_in_a_cycle)": 0
+  },
+  "model_footprint": {
+    "files_MB": {
+      "models/learned_fusion_model.pth": 0.0053
+    },
+    "model": {
+      "type": "TopologyAwareFusion",
+      "trainable_parameters": 242,
+      "buffer_values": 36,
+      "parameter_bytes": 968,
+      "buffer_bytes": 144,
+      "total_parameters_incl_frozen": 242,
+      "in_memory_MB_(pympler)": 0.0177
+    },
+    "note": null
+  }
+}

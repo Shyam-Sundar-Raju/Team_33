@@ -1,0 +1,183 @@
+{
+  "script": "simple_fusion_node.py",
+  "mode": "live traffic",
+  "cycles_measured": 50,
+  "cpu_percent_of_one_core": {
+    "mean": 0.7937,
+    "p95": 9.8706,
+    "max": 9.9742,
+    "n": 50
+  },
+  "cpu_percent_of_all_cores_mean": 0.198,
+  "rss_MB": {
+    "mean": 237.9694,
+    "p95": 238.0104,
+    "max": 238.0104,
+    "n": 50
+  },
+  "torch_threads": 4,
+  "decision_loop": {
+    "compute_block_ms_(decay+decide+print)": {
+      "mean": 0.1641,
+      "p95": 0.6182,
+      "max": 1.3607,
+      "n": 50
+    },
+    "print_ms": {
+      "mean": 0.0983,
+      "p95": 0.1998,
+      "max": 1.2986,
+      "n": 50
+    },
+    "compute_excl_print_ms": {
+      "mean": 0.0659,
+      "p95": 0.0635,
+      "max": 0.6673,
+      "n": 50
+    },
+    "torch_model_forward_ms": null,
+    "rule_eval_us": {
+      "mean": 9.8119,
+      "p95": 9.6314,
+      "max": 112.649,
+      "n": 50
+    },
+    "cycle_period_ms_(target=POLL_INTERVAL)": {
+      "mean": 100.298,
+      "p95": 101.033,
+      "max": 101.5214,
+      "n": 50
+    },
+    "cycle_jitter_ms_std": 0.3557,
+    "deadline_overruns_(period>1.05x_poll)": 0,
+    "cycles_flagged_attack": 50
+  },
+  "udp_receive": {
+    "packets_received": 284,
+    "invalid_or_ignored_packets": 0,
+    "json_parse_errors": 0,
+    "udp_payload_bytes_mean": 48,
+    "udp_wire_bytes_per_packet_mean": 89.4,
+    "achieved_packets_per_sec_total": 56.139,
+    "udp_kbps_avg": 40.564,
+    "inter_arrival_ms_(all_sources)": {
+      "mean": 17.7595,
+      "p95": 40.9772,
+      "max": 45.5333,
+      "n": 283
+    },
+    "json_parse_ms": {
+      "mean": 0.0172,
+      "p95": 0.0345,
+      "max": 0.0671,
+      "n": 284
+    },
+    "recv_to_state_update_ms": {
+      "mean": 0.0425,
+      "p95": 0.0859,
+      "max": 0.1558,
+      "n": 284
+    },
+    "per_source": {
+      "local_1": {
+        "packets": 50,
+        "rate_hz": 9.98,
+        "interval_ms": {
+          "mean": 100.1999,
+          "p95": 123.6359,
+          "max": 124.2349,
+          "n": 50
+        },
+        "jitter_ms_std": 12.2676,
+        "seq_lost": 0
+      },
+      "local_2": {
+        "packets": 31,
+        "rate_hz": 6.11,
+        "interval_ms": {
+          "mean": 163.6676,
+          "p95": 170.9147,
+          "max": 172.0127,
+          "n": 30
+        },
+        "jitter_ms_std": 10.8462,
+        "seq_lost": 0
+      },
+      "local_3": {
+        "packets": 50,
+        "rate_hz": 9.985,
+        "interval_ms": {
+          "mean": 100.1453,
+          "p95": 101.5737,
+          "max": 102.7142,
+          "n": 49
+        },
+        "jitter_ms_std": 1.0783,
+        "seq_lost": 0
+      },
+      "local_4": {
+        "packets": 50,
+        "rate_hz": 9.988,
+        "interval_ms": {
+          "mean": 100.1185,
+          "p95": 102.1211,
+          "max": 103.5514,
+          "n": 49
+        },
+        "jitter_ms_std": 1.3217,
+        "seq_lost": 0
+      },
+      "local_5": {
+        "packets": 51,
+        "rate_hz": 9.989,
+        "interval_ms": {
+          "mean": 100.107,
+          "p95": 102.2452,
+          "max": 104.2367,
+          "n": 50
+        },
+        "jitter_ms_std": 1.665,
+        "seq_lost": 0
+      },
+      "local_6": {
+        "packets": 51,
+        "rate_hz": 9.989,
+        "interval_ms": {
+          "mean": 100.1059,
+          "p95": 101.7494,
+          "max": 103.8422,
+          "n": 50
+        },
+        "jitter_ms_std": 1.2055,
+        "seq_lost": 0
+      }
+    },
+    "seq_lost_total_(needs_\"seq\"_in_payload)": 0,
+    "kernel_udp_counters_delta_(system-wide)": {
+      "InDatagrams": 285,
+      "InErrors": 0,
+      "RcvbufErrors": 0,
+      "NoPorts": 0
+    }
+  },
+  "freshness": {
+    "ingest_to_decision_ms_(arrival->cycle_that_uses_it)": {
+      "mean": 39.4707,
+      "p95": 96.6025,
+      "max": 100.2499,
+      "n": 282
+    },
+    "packets_consumed_per_cycle": {
+      "mean": 5.64,
+      "p95": 6.55,
+      "max": 8,
+      "n": 50
+    },
+    "state_overwrites_before_read_(same_source_twice_in_a_cycle)": 6
+  },
+  "model_footprint": {
+    "files_MB": {},
+    "model": null,
+    "note": "rule-based node: no learned model, no stored parameters"
+  }
+}

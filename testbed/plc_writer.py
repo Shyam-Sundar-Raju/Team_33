@@ -3,7 +3,6 @@ import json
 import struct
 import pandas as pd
 import numpy as np
-from scipy.io import arff
 from pymodbus.client import ModbusTcpClient
 
 # Load mapping
@@ -20,15 +19,13 @@ for ip in mapping["plcs"].keys():
 # Load Dataset
 print("Loading dataset for playback...")
 # Uncomment ONE of the following lines to choose between normal or attack data:
-data, meta = arff.loadarff('multiclass/normal_dataset.arff')
-# data, meta = arff.loadarff('multiclass/attack_dataset.arff')
+df = pd.read_csv('../baseline_models/normal.csv')
+# df = pd.read_csv('../baseline_models/attack.csv')
 
-df = pd.DataFrame(data)
-X = df.drop(columns=['marker'], errors='ignore')
+X = df.drop(columns=['marker', 'Timestamp', 'attack'], errors='ignore')
 
 for col in X.columns:
     if pd.api.types.is_object_dtype(X[col]):
-        X[col] = X[col].apply(lambda x: x.decode('utf-8') if isinstance(x, bytes) else x)
         X[col] = pd.to_numeric(X[col], errors='coerce')
 X.replace([np.inf, -np.inf], np.nan, inplace=True)
 X.fillna(0, inplace=True)

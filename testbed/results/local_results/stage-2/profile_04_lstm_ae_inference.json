@@ -1,0 +1,91 @@
+{
+  "script": "04_lstm_ae_inference.py",
+  "cycles_measured": 85,
+  "cpu_percent_of_one_core": {
+    "mean": 2.603,
+    "p95": 6.0554,
+    "max": 11.4338,
+    "n": 85
+  },
+  "cpu_percent_of_all_cores_mean": 0.651,
+  "rss_MB": {
+    "mean": 353.3948,
+    "p95": 360.9395,
+    "max": 360.9395,
+    "n": 85
+  },
+  "modbus_poll_ms": {
+    "mean": 163.9773,
+    "p95": 165.5587,
+    "max": 168.3683,
+    "n": 85
+  },
+  "modbus_read_failures_total": 0,
+  "compute_block_ms_(scale+infer+threshold+print)": {
+    "mean": 2.3923,
+    "p95": 6.1175,
+    "max": 23.0899,
+    "n": 85
+  },
+  "torch_model_forward_ms": {
+    "mean": 4.8034,
+    "p95": 7.5846,
+    "max": 20.8994,
+    "n": 26
+  },
+  "network_per_cycle": {
+    "modbus_requests": 11,
+    "modbus_app_layer_bytes": 254,
+    "modbus_est_wire_bytes": 2036,
+    "modbus_kbps_at_poll_rate": 162.88
+  },
+  "fusion_link": {
+    "destination": "127.0.0.1:50000",
+    "packets_sent": 85,
+    "send_errors": 0,
+    "udp_payload_bytes": 48,
+    "udp_wire_bytes_per_packet": 90,
+    "achieved_packets_per_sec": 6.0,
+    "udp_kbps_avg": 4.32,
+    "send_interval_ms_(target=POLL_INTERVAL)": {
+      "mean": 166.6711,
+      "p95": 167.5595,
+      "max": 191.8677,
+      "n": 84
+    },
+    "send_jitter_ms_std": 3.0305,
+    "deadline_overruns_(interval>1.05x_poll)": 84,
+    "sensing_to_send_ms_(poll+compute)": {
+      "mean": 166.3696,
+      "p95": 167.2009,
+      "max": 191.4582,
+      "n": 85
+    },
+    "udp_send_call_ms_(kernel_handoff_only)": {
+      "mean": 0.0465,
+      "p95": 0.0637,
+      "max": 0.0981,
+      "n": 85
+    }
+  },
+  "model_footprint": {
+    "files_MB": {
+      "../models/lstm_ae_stage2.pt": 0.0508,
+      "../models/scaler_stage2.pkl": 0.0015
+    },
+    "in_memory_MB_(pympler)": 0.0321,
+    "total_stored_numeric_values": 11822,
+    "torch_trainable_parameters": 11763,
+    "objects": [
+      {
+        "type": "LSTMAutoencoder",
+        "stored_numeric_values": 11763,
+        "trainable_parameters": 11763
+      },
+      {
+        "type": "MinMaxScaler",
+        "stored_numeric_values": 59
+      }
+    ]
+  }
+}

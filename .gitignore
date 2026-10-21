@@ -2,3 +2,7 @@ datasets/batadal/
 datasets/hai/
 datasets/swat/
 datasets/wadi/
+/venv
+local_models/dataset/
+local_models/dataset_new
+local_models/raw_data/

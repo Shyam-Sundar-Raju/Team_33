@@ -1,0 +1,97 @@
+{
+  "script": "01_markov_inference.py",
+  "cycles_measured": 50,
+  "cpu_percent_of_one_core": {
+    "mean": 1.1944,
+    "p95": 9.9979,
+    "max": 10.0722,
+    "n": 50
+  },
+  "cpu_percent_of_all_cores_mean": 0.299,
+  "rss_MB": {
+    "mean": 610.1074,
+    "p95": 610.1074,
+    "max": 610.1074,
+    "n": 50
+  },
+  "modbus_poll_ms": {
+    "mean": 20.8974,
+    "p95": 21.8928,
+    "max": 22.2426,
+    "n": 50
+  },
+  "modbus_read_failures_total": 0,
+  "compute_block_ms_(scale+infer+threshold+print)": {
+    "mean": 0.2316,
+    "p95": 0.2824,
+    "max": 0.2911,
+    "n": 50
+  },
+  "torch_model_forward_ms": null,
+  "network_per_cycle": {
+    "modbus_requests": 13,
+    "modbus_app_layer_bytes": 319,
+    "modbus_est_wire_bytes": 2425,
+    "modbus_kbps_at_poll_rate": 194.0
+  },
+  "fusion_link": {
+    "destination": "127.0.0.1:50000",
+    "packets_sent": 50,
+    "send_errors": 0,
+    "udp_payload_bytes": 48,
+    "udp_wire_bytes_per_packet": 90,
+    "achieved_packets_per_sec": 9.982,
+    "udp_kbps_avg": 7.187,
+    "send_interval_ms_(target=POLL_INTERVAL)": {
+      "mean": 100.1768,
+      "p95": 101.4853,
+      "max": 102.4799,
+      "n": 49
+    },
+    "send_jitter_ms_std": 0.9154,
+    "deadline_overruns_(interval>1.05x_poll)": 0,
+    "sensing_to_send_ms_(poll+compute)": {
+      "mean": 21.129,
+      "p95": 22.1311,
+      "max": 22.4494,
+      "n": 50
+    },
+    "udp_send_call_ms_(kernel_handoff_only)": {
+      "mean": 0.0363,
+      "p95": 0.0417,
+      "max": 0.0419,
+      "n": 50
+    }
+  },
+  "model_footprint": {
+    "files_MB": {
+      "../models/markov_stage5.pkl": 47.6726
+    },
+    "in_memory_MB_(approx)": 153.2755,
+    "total_stored_numeric_values": 843747,
+    "torch_trainable_parameters": null,
+    "objects": [
+      {
+        "type": "dict",
+        "stored_numeric_values": 843747,
+        "breakdown": {
+          "s2i_1": 42393,
+          "log_p_1": 204376,
+          "s2i_2": 42393,
+          "log_p_2": 427331,
+          "dwell_bounds": 127179,
+          "global_bound": 1,
+          "bin_edges": 66,
+          "nll_min_1": 1,
+          "nll_max_1": 1,
+          "thresh_1": 1,
+          "nll_min_2": 1,
+          "nll_max_2": 1,
+          "thresh_2": 1,
+          "k_bins": 1,
+          "window_size": 1
+        }
+      }
+    ]
+  }
+}

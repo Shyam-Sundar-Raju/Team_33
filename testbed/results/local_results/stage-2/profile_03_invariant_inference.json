@@ -1,0 +1,84 @@
+{
+  "script": "03_invariant_inference.py",
+  "cycles_measured": 42,
+  "cpu_percent_of_one_core": {
+    "mean": 0.7157,
+    "p95": 6.0102,
+    "max": 6.0162,
+    "n": 42
+  },
+  "cpu_percent_of_all_cores_mean": 0.179,
+  "rss_MB": {
+    "mean": 239.7837,
+    "p95": 239.7962,
+    "max": 239.7962,
+    "n": 42
+  },
+  "modbus_poll_ms": {
+    "mean": 165.895,
+    "p95": 166.0313,
+    "max": 166.3024,
+    "n": 42
+  },
+  "modbus_read_failures_total": 0,
+  "compute_block_ms_(scale+infer+threshold+print)": {
+    "mean": 0.1348,
+    "p95": 0.1505,
+    "max": 1.1485,
+    "n": 42
+  },
+  "torch_model_forward_ms": null,
+  "network_per_cycle": {
+    "modbus_requests": 11,
+    "modbus_app_layer_bytes": 254,
+    "modbus_est_wire_bytes": 2036,
+    "modbus_kbps_at_poll_rate": 162.88
+  },
+  "fusion_link": {
+    "destination": "127.0.0.1:50000",
+    "packets_sent": 42,
+    "send_errors": 0,
+    "udp_payload_bytes": 48,
+    "udp_wire_bytes_per_packet": 90,
+    "achieved_packets_per_sec": 6.012,
+    "udp_kbps_avg": 4.329,
+    "send_interval_ms_(target=POLL_INTERVAL)": {
+      "mean": 166.3235,
+      "p95": 166.3884,
+      "max": 167.2266,
+      "n": 41
+    },
+    "send_jitter_ms_std": 0.2157,
+    "deadline_overruns_(interval>1.05x_poll)": 41,
+    "sensing_to_send_ms_(poll+compute)": {
+      "mean": 166.0298,
+      "p95": 166.1417,
+      "max": 166.9393,
+      "n": 42
+    },
+    "udp_send_call_ms_(kernel_handoff_only)": {
+      "mean": 0.0399,
+      "p95": 0.0469,
+      "max": 0.0592,
+      "n": 42
+    }
+  },
+  "model_footprint": {
+    "files_MB": {
+      "../models/invariants_stage2.json": 0.0001
+    },
+    "in_memory_MB_(pympler)": 0.001,
+    "total_stored_numeric_values": 2,
+    "torch_trainable_parameters": null,
+    "objects": [
+      {
+        "type": "dict",
+        "stored_numeric_values": 2,
+        "breakdown": {
+          "AIT202_min": 1,
+          "AIT202_max": 1
+        }
+      }
+    ]
+  }
+}

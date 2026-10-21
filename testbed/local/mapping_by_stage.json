@@ -1,0 +1,269 @@
+{
+    "1": {
+        "P102": {
+            "plc_ip": "192.168.200.219",
+            "address": 0,
+            "is_discrete": true
+        },
+        "FIT101": {
+            "plc_ip": "192.168.200.219",
+            "address": 0,
+            "is_discrete": false
+        },
+        "LIT101": {
+            "plc_ip": "192.168.200.219",
+            "address": 2,
+            "is_discrete": false
+        },
+        "MV101": {
+            "plc_ip": "192.168.200.219",
+            "address": 4,
+            "is_discrete": true
+        },
+        "P101": {
+            "plc_ip": "192.168.200.219",
+            "address": 6,
+            "is_discrete": true
+        }
+    },
+    "2": {
+        "P201": {
+            "plc_ip": "192.168.200.219",
+            "address": 1,
+            "is_discrete": true
+        },
+        "P202": {
+            "plc_ip": "192.168.200.219",
+            "address": 2,
+            "is_discrete": true
+        },
+        "P204": {
+            "plc_ip": "192.168.200.219",
+            "address": 3,
+            "is_discrete": true
+        },
+        "P206": {
+            "plc_ip": "192.168.200.219",
+            "address": 4,
+            "is_discrete": true
+        },
+        "AIT201": {
+            "plc_ip": "192.168.200.219",
+            "address": 8,
+            "is_discrete": false
+        },
+        "AIT202": {
+            "plc_ip": "192.168.200.219",
+            "address": 10,
+            "is_discrete": false
+        },
+        "AIT203": {
+            "plc_ip": "192.168.200.219",
+            "address": 12,
+            "is_discrete": false
+        },
+        "FIT201": {
+            "plc_ip": "192.168.200.219",
+            "address": 14,
+            "is_discrete": false
+        },
+        "MV201": {
+            "plc_ip": "192.168.200.219",
+            "address": 16,
+            "is_discrete": true
+        },
+        "P203": {
+            "plc_ip": "192.168.200.219",
+            "address": 18,
+            "is_discrete": true
+        },
+        "P205": {
+            "plc_ip": "192.168.200.219",
+            "address": 20,
+            "is_discrete": true
+        }
+    },
+    "3": {
+        "DPIT301": {
+            "plc_ip": "192.168.200.220",
+            "address": 0,
+            "is_discrete": false
+        },
+        "FIT301": {
+            "plc_ip": "192.168.200.220",
+            "address": 2,
+            "is_discrete": false
+        },
+        "LIT301": {
+            "plc_ip": "192.168.200.220",
+            "address": 4,
+            "is_discrete": false
+        },
+        "MV301": {
+            "plc_ip": "192.168.200.220",
+            "address": 6,
+            "is_discrete": true
+        },
+        "MV302": {
+            "plc_ip": "192.168.200.220",
+            "address": 8,
+            "is_discrete": true
+        },
+        "MV303": {
+            "plc_ip": "192.168.200.220",
+            "address": 10,
+            "is_discrete": true
+        },
+        "MV304": {
+            "plc_ip": "192.168.200.220",
+            "address": 12,
+            "is_discrete": true
+        },
+        "P301": {
+            "plc_ip": "192.168.200.220",
+            "address": 14,
+            "is_discrete": true
+        },
+        "P302": {
+            "plc_ip": "192.168.200.220",
+            "address": 16,
+            "is_discrete": true
+        }
+    },
+    "4": {
+        "P401": {
+            "plc_ip": "192.168.200.220",
+            "address": 0,
+            "is_discrete": true
+        },
+        "P403": {
+            "plc_ip": "192.168.200.220",
+            "address": 1,
+            "is_discrete": true
+        },
+        "P404": {
+            "plc_ip": "192.168.200.220",
+            "address": 2,
+            "is_discrete": true
+        },
+        "AIT401": {
+            "plc_ip": "192.168.200.220",
+            "address": 18,
+            "is_discrete": false
+        },
+        "AIT402": {
+            "plc_ip": "192.168.200.220",
+            "address": 20,
+            "is_discrete": false
+        },
+        "FIT401": {
+            "plc_ip": "192.168.200.220",
+            "address": 22,
+            "is_discrete": false
+        },
+        "LIT401": {
+            "plc_ip": "192.168.200.220",
+            "address": 24,
+            "is_discrete": false
+        },
+        "P402": {
+            "plc_ip": "192.168.200.220",
+            "address": 26,
+            "is_discrete": true
+        },
+        "UV401": {
+            "plc_ip": "192.168.200.220",
+            "address": 28,
+            "is_discrete": true
+        }
+    },
+    "5": {
+        "P502": {
+            "plc_ip": "192.168.200.221",
+            "address": 0,
+            "is_discrete": true
+        },
+        "AIT501": {
+            "plc_ip": "192.168.200.221",
+            "address": 0,
+            "is_discrete": false
+        },
+        "AIT502": {
+            "plc_ip": "192.168.200.221",
+            "address": 2,
+            "is_discrete": false
+        },
+        "AIT503": {
+            "plc_ip": "192.168.200.221",
+            "address": 4,
+            "is_discrete": false
+        },
+        "AIT504": {
+            "plc_ip": "192.168.200.221",
+            "address": 6,
+            "is_discrete": false
+        },
+        "FIT501": {
+            "plc_ip": "192.168.200.221",
+            "address": 8,
+            "is_discrete": false
+        },
+        "FIT502": {
+            "plc_ip": "192.168.200.221",
+            "address": 10,
+            "is_discrete": false
+        },
+        "FIT503": {
+            "plc_ip": "192.168.200.221",
+            "address": 12,
+            "is_discrete": false
+        },
+        "FIT504": {
+            "plc_ip": "192.168.200.221",
+            "address": 14,
+            "is_discrete": false
+        },
+        "P501": {
+            "plc_ip": "192.168.200.221",
+            "address": 16,
+            "is_discrete": true
+        },
+        "PIT501": {
+            "plc_ip": "192.168.200.221",
+            "address": 18,
+            "is_discrete": false
+        },
+        "PIT502": {
+            "plc_ip": "192.168.200.221",
+            "address": 20,
+            "is_discrete": false
+        },
+        "PIT503": {
+            "plc_ip": "192.168.200.221",
+            "address": 22,
+            "is_discrete": false
+        }
+    },
+    "6": {
+        "P601": {
+            "plc_ip": "192.168.200.221",
+            "address": 1,
+            "is_discrete": true
+        },
+        "P603": {
+            "plc_ip": "192.168.200.221",
+            "address": 2,
+            "is_discrete": true
+        },
+        "FIT601": {
+            "plc_ip": "192.168.200.221",
+            "address": 24,
+            "is_discrete": false
+        },
+        "P602": {
+            "plc_ip": "192.168.200.221",
+            "address": 26,
+            "is_discrete": true
+        }
+    }
+}

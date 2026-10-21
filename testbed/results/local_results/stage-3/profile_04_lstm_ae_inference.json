@@ -1,0 +1,91 @@
+{
+  "script": "04_lstm_ae_inference.py",
+  "cycles_measured": 82,
+  "cpu_percent_of_one_core": {
+    "mean": 3.0446,
+    "p95": 10.1232,
+    "max": 10.5251,
+    "n": 82
+  },
+  "cpu_percent_of_all_cores_mean": 0.761,
+  "rss_MB": {
+    "mean": 353.1349,
+    "p95": 360.9559,
+    "max": 360.9559,
+    "n": 82
+  },
+  "modbus_poll_ms": {
+    "mean": 13.9504,
+    "p95": 14.827,
+    "max": 15.0338,
+    "n": 82
+  },
+  "modbus_read_failures_total": 0,
+  "compute_block_ms_(scale+infer+threshold+print)": {
+    "mean": 1.9529,
+    "p95": 5.6755,
+    "max": 8.1339,
+    "n": 82
+  },
+  "torch_model_forward_ms": {
+    "mean": 4.1824,
+    "p95": 4.9458,
+    "max": 7.0894,
+    "n": 23
+  },
+  "network_per_cycle": {
+    "modbus_requests": 9,
+    "modbus_app_layer_bytes": 207,
+    "modbus_est_wire_bytes": 1665,
+    "modbus_kbps_at_poll_rate": 133.2
+  },
+  "fusion_link": {
+    "destination": "127.0.0.1:50000",
+    "packets_sent": 82,
+    "send_errors": 0,
+    "udp_payload_bytes": 48,
+    "udp_wire_bytes_per_packet": 90,
+    "achieved_packets_per_sec": 9.992,
+    "udp_kbps_avg": 7.194,
+    "send_interval_ms_(target=POLL_INTERVAL)": {
+      "mean": 100.0846,
+      "p95": 101.6317,
+      "max": 109.1782,
+      "n": 81
+    },
+    "send_jitter_ms_std": 1.6112,
+    "deadline_overruns_(interval>1.05x_poll)": 1,
+    "sensing_to_send_ms_(poll+compute)": {
+      "mean": 15.9033,
+      "p95": 19.9424,
+      "max": 22.9105,
+      "n": 82
+    },
+    "udp_send_call_ms_(kernel_handoff_only)": {
+      "mean": 0.0472,
+      "p95": 0.0861,
+      "max": 0.1218,
+      "n": 82
+    }
+  },
+  "model_footprint": {
+    "files_MB": {
+      "../models/lstm_ae_stage3.pt": 0.0495,
+      "../models/scaler_stage3.pkl": 0.0014
+    },
+    "in_memory_MB_(pympler)": 0.0318,
+    "total_stored_numeric_values": 11490,
+    "torch_trainable_parameters": 11441,
+    "objects": [
+      {
+        "type": "LSTMAutoencoder",
+        "stored_numeric_values": 11441,
+        "trainable_parameters": 11441
+      },
+      {
+        "type": "MinMaxScaler",
+        "stored_numeric_values": 49
+      }
+    ]
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "script": "02_isolation_forest_inference.py",
+  "cycles_measured": 50,
+  "cpu_percent_of_one_core": {
+    "mean": 10.2077,
+    "p95": 14.8609,
+    "max": 16.3913,
+    "n": 50
+  },
+  "cpu_percent_of_all_cores_mean": 2.552,
+  "rss_MB": {
+    "mean": 365.9429,
+    "p95": 366.0022,
+    "max": 366.0022,
+    "n": 50
+  },
+  "modbus_poll_ms": {
+    "mean": 123.2005,
+    "p95": 126.3498,
+    "max": 127.2029,
+    "n": 50
+  },
+  "modbus_read_failures_total": 0,
+  "compute_block_ms_(scale+infer+threshold+print)": {
+    "mean": 11.9228,
+    "p95": 13.9526,
+    "max": 15.2116,
+    "n": 50
+  },
+  "torch_model_forward_ms": null,
+  "network_per_cycle": {
+    "modbus_requests": 23,
+    "modbus_app_layer_bytes": 572,
+    "modbus_est_wire_bytes": 4298,
+    "modbus_kbps_at_poll_rate": 343.84
+  },
+  "fusion_link": {
+    "destination": "127.0.0.1:50000",
+    "packets_sent": 50,
+    "send_errors": 0,
+    "udp_payload_bytes": 37,
+    "udp_wire_bytes_per_packet": 79,
+    "achieved_packets_per_sec": 7.39,
+    "udp_kbps_avg": 4.671,
+    "send_interval_ms_(target=POLL_INTERVAL)": {
+      "mean": 135.3143,
+      "p95": 137.8409,
+      "max": 139.3777,
+      "n": 49
+    },
+    "send_jitter_ms_std": 2.9605,
+    "deadline_overruns_(interval>1.05x_poll)": 49,
+    "sensing_to_send_ms_(poll+compute)": {
+      "mean": 135.1233,
+      "p95": 137.9808,
+      "max": 140.8353,
+      "n": 50
+    },
+    "udp_send_call_ms_(kernel_handoff_only)": {
+      "mean": 0.0521,
+      "p95": 0.0792,
+      "max": 0.0858,
+      "n": 50
+    }
+  },
+  "model_footprint": {
+    "files_MB": {
+      "models/isolation_forest_model.pkl": 1.0822,
+      "models/isolation_forest_scaler.pkl": 0.002
+    },
+    "in_memory_MB_(pympler)": 1.0728,
+    "total_stored_numeric_values": 26671,
+    "torch_trainable_parameters": null,
+    "objects": [
+      {
+        "type": "IsolationForest",
+        "stored_numeric_values": 26552
+      },
+      {
+        "type": "MinMaxScaler",
+        "stored_numeric_values": 119
+      }
+    ]
+  }
+}

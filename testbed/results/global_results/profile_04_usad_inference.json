@@ -1,0 +1,91 @@
+{
+  "script": "04_usad_inference.py",
+  "cycles_measured": 50,
+  "cpu_percent_of_one_core": {
+    "mean": 15.1849,
+    "p95": 22.3405,
+    "max": 24.6466,
+    "n": 50
+  },
+  "cpu_percent_of_all_cores_mean": 3.796,
+  "rss_MB": {
+    "mean": 358.9318,
+    "p95": 358.9571,
+    "max": 358.9571,
+    "n": 50
+  },
+  "modbus_poll_ms": {
+    "mean": 119.8853,
+    "p95": 126.9763,
+    "max": 127.2202,
+    "n": 50
+  },
+  "modbus_read_failures_total": 0,
+  "compute_block_ms_(scale+infer+threshold+print)": {
+    "mean": 9.4161,
+    "p95": 12.1631,
+    "max": 35.4534,
+    "n": 50
+  },
+  "torch_model_forward_ms": {
+    "mean": 8.0206,
+    "p95": 10.9029,
+    "max": 22.9228,
+    "n": 50
+  },
+  "network_per_cycle": {
+    "modbus_requests": 23,
+    "modbus_app_layer_bytes": 572,
+    "modbus_est_wire_bytes": 4298,
+    "modbus_kbps_at_poll_rate": 343.84
+  },
+  "fusion_link": {
+    "destination": "127.0.0.1:50000",
+    "packets_sent": 50,
+    "send_errors": 0,
+    "udp_payload_bytes": 37,
+    "udp_wire_bytes_per_packet": 79,
+    "achieved_packets_per_sec": 7.749,
+    "udp_kbps_avg": 4.897,
+    "send_interval_ms_(target=POLL_INTERVAL)": {
+      "mean": 129.046,
+      "p95": 137.7044,
+      "max": 139.4939,
+      "n": 49
+    },
+    "send_jitter_ms_std": 7.3126,
+    "deadline_overruns_(interval>1.05x_poll)": 49,
+    "sensing_to_send_ms_(poll+compute)": {
+      "mean": 129.3014,
+      "p95": 137.422,
+      "max": 157.8383,
+      "n": 50
+    },
+    "udp_send_call_ms_(kernel_handoff_only)": {
+      "mean": 0.0613,
+      "p95": 0.0884,
+      "max": 0.3079,
+      "n": 50
+    }
+  },
+  "model_footprint": {
+    "files_MB": {
+      "models/usad_swat_model_full.pth": 0.0198,
+      "models/swat_scaler.pkl": 0.002
+    },
+    "in_memory_MB_(pympler)": 0.0536,
+    "total_stored_numeric_values": 2877,
+    "torch_trainable_parameters": 2758,
+    "objects": [
+      {
+        "type": "USAD",
+        "stored_numeric_values": 2758,
+        "trainable_parameters": 2758
+      },
+      {
+        "type": "MinMaxScaler",
+        "stored_numeric_values": 119
+      }
+    ]
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "script": "02_pasad_inference.py",
+  "cycles_measured": 50,
+  "cpu_percent_of_one_core": {
+    "mean": 4.6556,
+    "p95": 10.3494,
+    "max": 51.6674,
+    "n": 50
+  },
+  "cpu_percent_of_all_cores_mean": 1.164,
+  "rss_MB": {
+    "mean": 348.6004,
+    "p95": 348.6188,
+    "max": 348.6351,
+    "n": 50
+  },
+  "modbus_poll_ms": {
+    "mean": 12.9149,
+    "p95": 13.7353,
+    "max": 14.2764,
+    "n": 50
+  },
+  "modbus_read_failures_total": 0,
+  "compute_block_ms_(scale+infer+threshold+print)": {
+    "mean": 3.209,
+    "p95": 6.3978,
+    "max": 8.0923,
+    "n": 50
+  },
+  "torch_model_forward_ms": null,
+  "network_per_cycle": {
+    "modbus_requests": 8,
+    "modbus_app_layer_bytes": 200,
+    "modbus_est_wire_bytes": 1496,
+    "modbus_kbps_at_poll_rate": 119.68
+  },
+  "fusion_link": {
+    "destination": "127.0.0.1:50000",
+    "packets_sent": 50,
+    "send_errors": 0,
+    "udp_payload_bytes": 48,
+    "udp_wire_bytes_per_packet": 90,
+    "achieved_packets_per_sec": 9.998,
+    "udp_kbps_avg": 7.199,
+    "send_interval_ms_(target=POLL_INTERVAL)": {
+      "mean": 100.0166,
+      "p95": 102.0772,
+      "max": 105.5943,
+      "n": 49
+    },
+    "send_jitter_ms_std": 1.7961,
+    "deadline_overruns_(interval>1.05x_poll)": 1,
+    "sensing_to_send_ms_(poll+compute)": {
+      "mean": 16.1239,
+      "p95": 18.8396,
+      "max": 21.5906,
+      "n": 50
+    },
+    "udp_send_call_ms_(kernel_handoff_only)": {
+      "mean": 0.0717,
+      "p95": 0.0943,
+      "max": 0.1361,
+      "n": 50
+    }
+  },
+  "model_footprint": {
+    "files_MB": {
+      "../models/pasad_stage5.pkl": 0.0236
+    },
+    "in_memory_MB_(pympler)": 0.0139,
+    "total_stored_numeric_values": 2296,
+    "torch_trainable_parameters": null,
+    "objects": [
+      {
+        "type": "dict",
+        "stored_numeric_values": 2296,
+        "breakdown": {
+          "AIT501": 287,
+          "AIT502": 287,
+          "AIT503": 287,
+          "AIT504": 287,
+          "FIT501": 287,
+          "FIT502": 287,
+          "FIT503": 287,
+          "FIT504": 287
+        }
+      }
+    ]
+  }
+}

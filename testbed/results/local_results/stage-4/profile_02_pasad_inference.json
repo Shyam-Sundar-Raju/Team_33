@@ -1,0 +1,87 @@
+{
+  "script": "02_pasad_inference.py",
+  "cycles_measured": 50,
+  "cpu_percent_of_one_core": {
+    "mean": 2.4009,
+    "p95": 10.0755,
+    "max": 10.1008,
+    "n": 50
+  },
+  "cpu_percent_of_all_cores_mean": 0.6,
+  "rss_MB": {
+    "mean": 348.5404,
+    "p95": 348.5532,
+    "max": 348.5696,
+    "n": 50
+  },
+  "modbus_poll_ms": {
+    "mean": 7.6997,
+    "p95": 8.5747,
+    "max": 8.8468,
+    "n": 50
+  },
+  "modbus_read_failures_total": 0,
+  "compute_block_ms_(scale+infer+threshold+print)": {
+    "mean": 1.8799,
+    "p95": 3.0818,
+    "max": 5.9971,
+    "n": 50
+  },
+  "torch_model_forward_ms": null,
+  "network_per_cycle": {
+    "modbus_requests": 5,
+    "modbus_app_layer_bytes": 122,
+    "modbus_est_wire_bytes": 932,
+    "modbus_kbps_at_poll_rate": 74.56
+  },
+  "fusion_link": {
+    "destination": "127.0.0.1:50000",
+    "packets_sent": 50,
+    "send_errors": 0,
+    "udp_payload_bytes": 48,
+    "udp_wire_bytes_per_packet": 90,
+    "achieved_packets_per_sec": 10.0,
+    "udp_kbps_avg": 7.2,
+    "send_interval_ms_(target=POLL_INTERVAL)": {
+      "mean": 100.0016,
+      "p95": 101.4595,
+      "max": 102.2033,
+      "n": 49
+    },
+    "send_jitter_ms_std": 1.0789,
+    "deadline_overruns_(interval>1.05x_poll)": 0,
+    "sensing_to_send_ms_(poll+compute)": {
+      "mean": 9.5795,
+      "p95": 11.2085,
+      "max": 14.8439,
+      "n": 50
+    },
+    "udp_send_call_ms_(kernel_handoff_only)": {
+      "mean": 0.0501,
+      "p95": 0.0767,
+      "max": 0.087,
+      "n": 50
+    }
+  },
+  "model_footprint": {
+    "files_MB": {
+      "../models/pasad_stage4.pkl": 0.0149
+    },
+    "in_memory_MB_(pympler)": 0.0091,
+    "total_stored_numeric_values": 1435,
+    "torch_trainable_parameters": null,
+    "objects": [
+      {
+        "type": "dict",
+        "stored_numeric_values": 1435,
+        "breakdown": {
+          "AIT401": 287,
+          "AIT402": 287,
+          "FIT401": 287,
+          "LIT401": 287,
+          "UV401": 287
+        }
+      }
+    ]
+  }
+}

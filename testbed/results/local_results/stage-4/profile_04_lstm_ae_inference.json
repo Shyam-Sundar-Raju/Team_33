@@ -1,0 +1,86 @@
+{
+  "script": "04_lstm_ae_inference.py",
+  "cycles_measured": 50,
+  "cpu_percent_of_one_core": {
+    "mean": 2.2267,
+    "p95": 10.042,
+    "max": 51.1334,
+    "n": 50
+  },
+  "cpu_percent_of_all_cores_mean": 0.557,
+  "rss_MB": {
+    "mean": 350.0999,
+    "p95": 350.1261,
+    "max": 350.1261,
+    "n": 50
+  },
+  "modbus_poll_ms": {
+    "mean": 14.0479,
+    "p95": 14.8479,
+    "max": 14.9875,
+    "n": 50
+  },
+  "modbus_read_failures_total": 0,
+  "compute_block_ms_(scale+infer+threshold+print)": {
+    "mean": 0.753,
+    "p95": 1.5799,
+    "max": 4.8112,
+    "n": 50
+  },
+  "torch_model_forward_ms": null,
+  "network_per_cycle": {
+    "modbus_requests": 9,
+    "modbus_app_layer_bytes": 210,
+    "modbus_est_wire_bytes": 1668,
+    "modbus_kbps_at_poll_rate": 133.44
+  },
+  "fusion_link": {
+    "destination": "127.0.0.1:50000",
+    "packets_sent": 50,
+    "send_errors": 0,
+    "udp_payload_bytes": 48,
+    "udp_wire_bytes_per_packet": 90,
+    "achieved_packets_per_sec": 10.004,
+    "udp_kbps_avg": 7.203,
+    "send_interval_ms_(target=POLL_INTERVAL)": {
+      "mean": 99.9642,
+      "p95": 101.4263,
+      "max": 102.6808,
+      "n": 49
+    },
+    "send_jitter_ms_std": 1.089,
+    "deadline_overruns_(interval>1.05x_poll)": 0,
+    "sensing_to_send_ms_(poll+compute)": {
+      "mean": 14.8009,
+      "p95": 16.1582,
+      "max": 19.668,
+      "n": 50
+    },
+    "udp_send_call_ms_(kernel_handoff_only)": {
+      "mean": 0.0405,
+      "p95": 0.0542,
+      "max": 0.072,
+      "n": 50
+    }
+  },
+  "model_footprint": {
+    "files_MB": {
+      "../models/lstm_ae_stage4.pt": 0.0495,
+      "../models/scaler_stage4.pkl": 0.0014
+    },
+    "in_memory_MB_(pympler)": 0.0318,
+    "total_stored_numeric_values": 11490,
+    "torch_trainable_parameters": 11441,
+    "objects": [
+      {
+        "type": "LSTMAutoencoder",
+        "stored_numeric_values": 11441,
+        "trainable_parameters": 11441
+      },
+      {
+        "type": "MinMaxScaler",
+        "stored_numeric_values": 49
+      }
+    ]
+  }
+}
